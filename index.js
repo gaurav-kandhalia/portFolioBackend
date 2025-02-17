@@ -19,10 +19,10 @@ app.get('/',async(req,res)=>{
     
 })
 
-app.use('/api',Router)
+app.use('/api/v1',Router)
 
 
 
-app.listen(5911,()=>{
-    console.log("server connected to ",5911)
+app.listen(process.env.PORT,()=>{
+    console.log("server connected to ",process.env.PORT)
 })
