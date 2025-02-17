@@ -7,6 +7,7 @@ const AdminModel = require('./model/admin')
 const Router = require('./routes/routes')
 const cors = require('cors')
 const moragn = require('morgan')
+const PORT = process.env.PORT;
 
 
 
@@ -23,6 +24,6 @@ app.use('/api/v1',Router)
 
 
 
-app.listen(process.env.PORT,()=>{
-    console.log("server connected to ",process.env.PORT)
+app.listen(PORT,()=>{
+    console.log("server connected to ",PORT)
 })
