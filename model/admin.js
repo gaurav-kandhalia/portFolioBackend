@@ -26,4 +26,4 @@ const addAdmin = async (req,res)=>{
     }
  }
  
- addAdmin();
+ addAdmin();''
