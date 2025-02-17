@@ -22,7 +22,7 @@ const addAdmin = async (req,res)=>{
      await admin.save();
  
     }catch(error){
-     res.send("error occured")
+        res.status(500).send("Error occurred");
     }
  }
  
