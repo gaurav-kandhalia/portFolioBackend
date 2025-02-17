@@ -23,7 +23,7 @@ const AddProject = async (req, res) => {
         }
 
         const absolutePath = path.resolve(coverImage).replace(/\\/g, '/');
-        console.log("Absolute Path:", absolutePath);
+       
 
         const image = await uploadCloudinary(coverImage);
 
@@ -39,7 +39,7 @@ const AddProject = async (req, res) => {
             img_link: image, // Use img_link as defined in schema
         });
 
-        console.log("-----------------Project----------------", project);
+        
 
         await project.save();
         return res.status(201).send("Project added successfully");

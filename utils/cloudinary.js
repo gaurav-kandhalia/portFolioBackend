@@ -2,8 +2,7 @@
 const cloudinary = require('cloudinary').v2;
 
 const fs = require('fs')
-console.log("---------------------------")
-console.log(process.env. CLOUDINARY_API_SECRET)
+
 cloudinary.config({ 
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
     api_key: process.env.CLOUD_API_KEY, 
