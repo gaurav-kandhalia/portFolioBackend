@@ -12,7 +12,7 @@ const moragn = require('morgan')
 
 //Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors(process.env.CORS));
 app.use(moragn('dev'));
 
 app.get('/',async(req,res)=>{
