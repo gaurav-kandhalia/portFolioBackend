@@ -1,29 +1,17 @@
 const mongoose = require('mongoose');
 
-
-
-const Admin =new mongoose.Schema({
-    email:String,
-    password:String
+const AdminSchema = new mongoose.Schema({  
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    password: {
+        type: String,
+        required: true
+    }
 });
 
-const AdminModel = mongoose.model('Admin',Admin);
+const AdminModel = mongoose.model('Admin', AdminSchema);
 
 module.exports = AdminModel;
-
-
-const addAdmin = async (req,res)=>{
-    try{
-     const admin = new AdminModel({
-         email:'admin@gmail.com',
-         password:'12345'
-     })
- 
-     await admin.save();
- 
-    }catch(error){
-        console.error(error)
-    }
- }
- 
- addAdmin();
