@@ -22,7 +22,17 @@ const Login = async (req,res)=>{
     
 
         if(email === admin[0].email && password === admin[0].password){
-res.send("welcome admin")
+res.json({
+    status:200,
+    msg:'login successful',
+    isAdmin:true
+})
+        }else{
+            res.json({
+                status:400,
+                msg:'login failed',
+                isAdmin:false
+})
         }
 
     }catch(error){
