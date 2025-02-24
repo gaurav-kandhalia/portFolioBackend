@@ -17,8 +17,7 @@ const AddProject = async (req, res) => {
         }
 
         const coverImage = req.file?.path;
-        console.log("coverImage");
-        console.log(coverImage)
+     
 
         if (!coverImage) {
             return res.status(400).send("Not a valid image");
